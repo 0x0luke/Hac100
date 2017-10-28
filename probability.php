@@ -1,23 +1,20 @@
 <?php
 
-$item = $_GET['itemID'];
 $userid = $_GET['userid'];
 $productid = $_GET['productid'];
 
-$url = 'http://127.0.0.1/items';
-
-$itemid = array();
+$url = 'http://127.0.0.1:3000/items';
 
 $probability = rand(0,10);
 
-$data = array($productid, $percent, $userid, $itemid, $probability);
+$data = array('productID' => $productid, 'userid' => $userid, 'probability' => $probability);
+$postdata = http_build_query($data);
 
 $options = array(
             'http' => array(
-                'header' => "Content-type: application/x-www-form-urlencoded\r\n",
-                'method' => "POST",
-                'content' => http_build_query($data),
-
+                'header' => "Content-type: application/x-www-form-urlencoded",
+                'content' => $postdata,
+                'method' => "POST"
             )
     );
 
