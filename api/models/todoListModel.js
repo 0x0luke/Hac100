@@ -4,10 +4,10 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 
-var TaskSchema = new Schema({
+var ItemSchema = new Schema({
     name: {
         type: String,
-        required: "Enter the name of the task",
+        required: "Enter the name of the item",
     },
     Created_date:{
         type: Date,
@@ -16,13 +16,13 @@ var TaskSchema = new Schema({
     status:{
         type:[{
             type: String,
-            enum:['pending','ongoing','completed']
+            enum:['bought', 'notbought']
 
         }],
-        default:['pending']
+        default:['notbought']
     }
 
 
 });
 
-module.exports = mongoose.model('Tasks', TaskSchema);
+module.exports = mongoose.model('Items', ItemSchema);
