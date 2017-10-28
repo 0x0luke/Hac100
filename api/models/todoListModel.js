@@ -26,8 +26,6 @@ var ItemSchema = new Schema({
             default: 0,
         }],       
     },
-
-
 });
 
 module.exports = mongoose.model('Items', ItemSchema);
