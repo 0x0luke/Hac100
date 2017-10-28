@@ -2,12 +2,16 @@
 
 $userid = $_GET['userid'];
 $productid = $_GET['productid'];
+$basket = $_GET['basket'];
 
+$basketcomp = array($basket);
 $url = 'http://127.0.0.1:3000/items';
 
-$probability = rand(0,10);
+$products = array('tea' => 'coffee', 'milk' => 'sugar');
 
-$data = array('productID' => $productid, 'userid' => $userid, 'probability' => $probability);
+$compare = array_diff($basketcomp,$products);
+
+$data = array('productID' => $productid, 'userid' => $userid, 'suggested' => $compare, 'probability' => $probability);
 $postdata = http_build_query($data);
 
 $options = array(

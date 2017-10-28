@@ -9,10 +9,9 @@ var ItemSchema = new Schema({
         type: Number,
         default: 0,
     },
-    /*percent:{
-        type: Number,
-        default: 0,
-    },*/
+    suggested:{
+        type: String,
+    },
     userid: {
         type: String
     },
