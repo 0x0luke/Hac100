@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "a restful api for hac100",
   "main": "app.js",
-  "start": "nodemon server.js",
   "dependencies": {
     "eslint": "^4.10.0",
     "express": "^4.16.2",
@@ -12,7 +11,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "express --save",
+    "start": "nodemon serverSetup.js"
   },
   "repository": {
     "type": "git",
