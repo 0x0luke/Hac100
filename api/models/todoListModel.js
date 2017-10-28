@@ -11,6 +11,7 @@ var ItemSchema = new Schema({
     },
     suggested:{
         type: String,
+        required: "Suggested item is missing"
     },
     userid: {
         type: String
