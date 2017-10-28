@@ -13,6 +13,9 @@ var ItemSchema = new Schema({
         type: Date,
         default: Date.now,
     },
+    userid: {
+        type: String
+    },
     status:{
         type:[{
             type: String,
