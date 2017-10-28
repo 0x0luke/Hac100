@@ -5,25 +5,27 @@ var Schema = mongoose.Schema;
 
 
 var ItemSchema = new Schema({
-    name: {
+    productID: {
         type: String,
         required: "Enter the name of the item",
     },
-    Created_date:{
-        type: Date,
-        default: Date.now,
+    percent:{
+        type: Number,
+        default: 0,
     },
     userid: {
         type: String
     },
-    status:{
-        type:[{
+    recommendedItems:{
+        itemID:[{
             type: String,
-            enum:['bought', 'notbought']
-
+            default: 0,
         }],
-        default:['notbought']
-    }
+        probability:[{
+            type: Number,
+            default: 0,
+        }],       
+    },
 
 
 });
