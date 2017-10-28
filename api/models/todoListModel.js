@@ -4,7 +4,7 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 
-var TaskSchema = newSchema({
+var TaskSchema = new Schema({
     name: {
         type: String,
         required: "Enter the name of the task",
