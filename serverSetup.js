@@ -5,7 +5,6 @@ port = process.env.PORT || 3000,
 mongoose = require('mongoose'),
 Items = require('./api/models/todoListModel'), //created model loading here
 bodyParser = require('body-parser');
-probcalc = require('./api/probability/probabilitycalc');
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
@@ -19,7 +18,6 @@ app.use(morgan('dev'));
 
 var routes = require('./api/routes/todoListRoutes'); //importing route
 routes(app); //register the route
-
 
 app.listen(port);
 

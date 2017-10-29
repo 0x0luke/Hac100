@@ -9,10 +9,6 @@ var ItemSchema = new Schema({
         type: Number,
         default: 0,
     },
-    suggested:{
-        type: String,
-        required: "Suggested item is missing"
-    },
     userid: {
         type: String
     },
