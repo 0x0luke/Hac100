@@ -5,6 +5,7 @@ port = process.env.PORT || 3000,
 mongoose = require('mongoose'),
 Items = require('./api/models/todoListModel'), //created model loading here
 bodyParser = require('body-parser');
+probcalc = require('./api/probability/probabilitycalc');
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
