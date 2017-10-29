@@ -13,10 +13,6 @@ var ItemSchema = new Schema({
         type: String
     },
     recommendedItems:{
-        itemID:[{
-            type: String,
-            default: 0,
-        }],
         probability:[{
             type: Number,
             default: 0,

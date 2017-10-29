@@ -2,11 +2,11 @@
 
 $userid = $_GET['userid'];
 $productid = $_GET['productid'];
-$basket = $_GET['basket'];
+$probability = $_GET['probability'];
 
 $url = 'http://127.0.0.1:3000/items';
 
-$data = array('productID' => $productid, 'userid' => $userid, 'basket' => $basket);
+$data = array('productID' => $productid, 'userid' => $userid, 'probability' => $probability);
 $postdata = http_build_query($data);
 
 $options = array(
