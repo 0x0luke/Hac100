@@ -1,9 +1,8 @@
 <?php
 
-$mongo = new MongoClient();
+$m = new MongoClient();
+$db = $m->selectDB('test');
+$collection = new MongoCollection($db, 'Tododb');
 
-echo "connected correctly, moving on..";
-
-$db = $m->mydb;
 
 ?>
