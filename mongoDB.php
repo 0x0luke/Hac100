@@ -6,9 +6,13 @@ $userid = $_GET['userid'];
 $m = new MongoClient();
 $db = $m->selectDB('Tododb');
 $collection = new MongoCollection($db, 'Tododb');
+$mongoObject["productID"] = new MongoId($this->productID);
+$mongoObject["userid"] = new MongoId($this->userid);
 
 echo "connect tings";
-$lookupprod = array('ProductID' => $productID, 'userid' => $userid);
+$db -> $lookupprod = array('ProductID' => $productID, 'userid' => $userid);
+
+echo $lookupprod;
 
 $mathmedaddy = $lookupprod/rand(0, 3);
 
