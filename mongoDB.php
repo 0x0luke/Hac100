@@ -14,8 +14,4 @@ $db -> $lookupprod = array('ProductID' => $productID, 'userid' => $userid);
 
 echo $lookupprod;
 
-$mathmedaddy = $lookupprod/rand(0, 3);
-
-echo $mathmedaddy;
-
 ?>
